@@ -1,0 +1,149 @@
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@each $type in center, start, around, between, end {
+  .justify-#{$type} {
+    @if $type == start {
+      justify-content: flex-#{$type};
+    } @else if $type == end {
+      justify-content: flex-#{$type};
+    } @else if $type == around {
+      justify-content: space-#{$type};
+    } @else if $type == between {
+      justify-content: space-#{$type};
+    } @else {
+      justify-content: center;
+    }
+  }
+}
+
+@each $type in center, start, end {
+  .align-#{$type} {
+    @if $type == start {
+      align-items: flex-#{$type};
+    } @else if $type == end {
+      align-items: flex-#{$type};
+    } @else {
+      align-items: center;
+    }
+  }
+}
+
+// 定义padding循环边距
+@for $i from 0 to 7 {
+  // 定义padding外边距
+  .pa-#{$i} {
+    padding: #{$i * 4}px !important;
+  }
+
+  // 定义padding-top循环边距
+  .pt-#{$i} {
+    padding-top: #{$i * 4}px !important;
+  }
+
+  // 定义padding-top循环边距
+  .pb-#{$i} {
+    padding-bottom: #{$i * 4}px !important;
+  }
+
+  // 定义padding-left循环边距
+  .pl-#{$i} {
+    padding-left: #{$i * 4}px !important;
+  }
+
+  // 定义padding-right循环边距
+  .pr-#{$i} {
+    padding-right: #{$i * 4}px !important;
+  }
+}
+
+// 定义margin循环边距
+@for $i from 0 to 7 {
+  // 定义margin外边距
+  .ma-#{$i} {
+    margin: #{$i * 4}px !important;
+  }
+
+  // 定义margin-top循环边距
+  .mt-#{$i} {
+    margin-top: #{$i * 4}px !important;
+  }
+
+  // 定义margin-top循环边距
+  .mb-#{$i} {
+    margin-bottom: #{$i * 4}px !important;
+  }
+
+  // 定义margin-left循环边距
+  .ml-#{$i} {
+    margin-left: #{$i * 4}px !important;
+  }
+
+  // 定义margin-right循环边距
+  .mr-#{$i} {
+    margin-right: #{$i * 4}px !important;
+  }
+}
+
+// 定义margin循环边距
+@each $type in a, t, r, b,l {
+  .m#{$type}-10 {
+    @if $type == a {
+      margin: 10px;
+    } @else if $type == t {
+      margin-top: 10px;
+    } @else if $type == r {
+      margin-right: 10px;
+    } @else if $type == b {
+      margin-bottom: 10px;
+    } @else {
+      margin-left: 10px;
+    }
+  }
+}
+
+// 定义margin循环边距
+@each $type in 12, 14, 16 {
+  .font-#{$type} {
+    font-size: #{$type}px;
+  }
+}

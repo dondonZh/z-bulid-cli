@@ -1,0 +1,41 @@
+@import "./common.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 全局标题颜色 */
+.global-head-title {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #333;
+
+  div,
+  span {
+    letter-spacing: 0;
+  }
+}
+
+.page-wrap {
+  display: flex;
+  margin: 10px 0;
+  justify-content: flex-end;
+}
+
+.main-container {
+  padding: 10px;
+  background-color: #fff;
+  height: calc(100vh - 40px);
+}
+
+.sub-title {
+  padding: 1px 16px;
+  border-left: 5px solid #50bfff;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
